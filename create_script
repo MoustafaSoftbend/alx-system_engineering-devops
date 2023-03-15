@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Ask the user for the name of the script
+read -p "Enter the name of the script: " script_name
+
+# Create the file with the given name and add a shebang line
+touch "$script_name"
+echo "#!/bin/bash" > "$script_name"
+
+# Make the file executable
+chmod +x "$script_name"
+
+# Open the file in the default text editor
+vi "$script_name"
